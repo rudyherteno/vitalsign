@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">FastBLE</string>
+
+    <string name="notifyTitle">Title</string>
+    <string name="gpsNotifyMsg">当前手机扫描蓝牙需要打开定位功能。</string>
+    <string name="setting">Setting</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="start_scan">Start Scan</string>
+    <string name="stop_scan">Stop Scan</string>
+    <string name="expand_search_settings">Expand Search Setting</string>
+    <string name="retrieve_search_settings">Retrieve Search Setting</string>
+    <string name="connect_fail">connect_fail</string>
+    <string name="active_disconnected">active_disconnected</string>
+    <string name="disconnected">disconnected</string>
+    <string name="please_open_blue">please_open_blue</string>
+    <string name="select_operation_type">select_operation_type</string>
+    <string name="characteristic">characteristic</string>
+    <string name="data_changed">data_changed：</string>
+    <string name="read">read</string>
+    <string name="write">write</string>
+    <string name="open_notification">open_notification</string>
+    <string name="close_notification">close_notification</string>
+    <string name="service_list">service_list</string>
+    <string name="characteristic_list">characteristic_list</string>
+    <string name="console">console</string>
+    <string name="name">name：</string>
+    <string name="mac">MAC:</string>
+    <string name="service">service</string>
+    <string name="type">type</string>
+    <string name="scan_setting">scan_setting</string>
+    <string name="setting_name">setting_name</string>
+    <string name="setting_mac">setting_mac</string>
+    <string name="setting_uuid">setting_uuid</string>
+    <string name="input_hex">input_hex</string>
+    <string name="connect">connect</string>
+    <string name="connected">connected</string>
+    <string name="disconnect">disconnect</string>
+    <string name="enter">enter</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+</resources>
