@@ -30,6 +30,13 @@ public class BloodInfo {
 
 
     public void initWithData(byte[] bArr) {
+        String d = "";
+        for (int i=0; i<bArr.length; i++) {
+            d+=bArr[i] & -1;
+            d+=" ";
+        }
+
+        Log.d("uuuuu-blood", d);
         if (bArr.length == 8) {
             String[] separated = HexUtil.formatHexString(bArr, true).split(" ");
             long Bytes2Dec = TransUtils.Bytes2Dec(new byte[]{bArr[3], bArr[2], bArr[1], bArr[0]}) + 946684800;
@@ -44,9 +51,10 @@ public class BloodInfo {
             Log.d("indicate_data_blood_sbp", String.valueOf(this.SBP));
             Log.d("indicate_data_blood_dbp", String.valueOf(this.DBP ));
             int decimal=Integer.parseInt(String.valueOf(separated[5]),16);
-            Log.d("indicate_data_blood_dbp", String.valueOf(decimal));
+            Log.d("indicate_data_blood_dbp" , String.valueOf(decimal));
             this.DBP = decimal;
             Log.d("uuuu-notify", String.valueOf(decimal));
+
             return;
         }
     }

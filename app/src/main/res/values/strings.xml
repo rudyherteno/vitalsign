@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FastBLE</string>
+    <string name="app_name">eVitacare</string>
 
     <string name="notifyTitle">Title</string>
     <string name="gpsNotifyMsg">当前手机扫描蓝牙需要打开定位功能。</string>

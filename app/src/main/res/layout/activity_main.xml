@@ -5,7 +5,74 @@
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
     android:orientation="vertical"
+    android:padding="10dp"
     >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/roundedbutton"
+        android:layout_above="@id/btn_scan"
+        >
+        <Button
+            android:id="@+id/mButtonLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/roundedbutton"
+            android:text="Log Out"
+            android:layout_margin="30dp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorWhite" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:text="PROFIL PASIEN"
+                android:textSize="20dp"
+                android:layout_marginBottom="5dp"
+                android:textStyle="bold">
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/main_tvName"
+                android:textColor="@color/colorWhite"
+                android:text="Name"
+                android:textStyle="bold">
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/main_tvAge"
+                android:textColor="@color/colorWhite"
+                android:text="Age"
+                android:layout_marginBottom="10dp">
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textColor="@color/colorWhite"
+                android:text="Medical Record Number"
+                android:textStyle="bold">
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/main_tvBpjs"
+                android:textColor="@color/colorWhite"
+                android:text="BPJS">
+            </TextView>
+        </LinearLayout>
+    </RelativeLayout>
 
 
     <RelativeLayout
@@ -25,15 +92,17 @@
             android:padding="20dp"
             android:text="CONNECT" />
 
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
+
             android:layout_above="@id/btn_scan"
-            android:padding="10dp">
+            >
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:id="@+id/lnConnected"
                 android:visibility="invisible"

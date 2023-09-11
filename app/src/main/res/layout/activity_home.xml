@@ -25,7 +25,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="25dp"
+                        android:textSize="20dp"
+                        android:id="@+id/tv_home_name"
                         android:textColor="@color/colorWhite"
                         android:text="Nama Pasien"></TextView>
                     <RelativeLayout
@@ -62,6 +63,7 @@
                         android:layout_height="50dp"
                         android:id="@+id/tvResult"
                         android:textSize="25dp"
+
                         android:gravity="center_horizontal|center_vertical"
                         android:textColor="@color/colorWhite"
                         android:text="1"></TextView>
@@ -76,12 +78,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/colorWhite"
+                            android:id="@+id/tv_ews_label"
                             android:textSize="20dp"
                             android:text="RESIKO RENDAH"></TextView>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/colorWhite"
+                            android:id="@+id/tv_ews_lastdate"
                             android:textSize="10dp"
                             android:text="30 Agustus 2022"></TextView>
                     </LinearLayout>
@@ -247,7 +251,8 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/rounded"
                 android:padding="@dimen/activity_horizontal_margin"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:id="@+id/boxTingkatSadar">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -263,7 +268,7 @@
                         android:textStyle="bold"
                         android:layout_alignParentBottom="true"
                         android:textColor="@color/colorWhite"
-                        android:text="Sadar"></TextView>
+                        android:text="-"></TextView>
 
 
             </LinearLayout>
@@ -272,7 +277,8 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/rounded"
                 android:padding="@dimen/activity_horizontal_margin"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:id="@+id/boxOksigen">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -288,7 +294,7 @@
                     android:textStyle="bold"
                     android:layout_alignParentBottom="true"
                     android:textColor="@color/colorWhite"
-                    android:text="Tidak ada"></TextView>
+                    android:text="-"></TextView>
 
 
             </LinearLayout>

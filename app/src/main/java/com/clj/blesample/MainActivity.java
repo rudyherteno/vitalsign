@@ -38,6 +38,7 @@ import androidx.core.content.ContextCompat;
 
 import com.clj.blesample.activity.HomeActivity;
 import com.clj.blesample.adapter.DeviceAdapter;
+import com.clj.blesample.api.SessionManager;
 import com.clj.blesample.comm.ObserverManager;
 import com.clj.blesample.lib.Config;
 import com.clj.blesample.model.BloodInfo;
@@ -72,10 +73,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final String TAG = MainActivity.class.getSimpleName();
     private static final int REQUEST_CODE_OPEN_GPS = 1;
     private static final int REQUEST_CODE_PERMISSION_LOCATION = 2;
-
+    SessionManager sessionManager;
     private LinearLayout layout_setting, lnConnected;
-    private TextView txt_setting;
-    private Button btn_scan, btn_write, btn_enter;
+    private TextView txt_setting, main_name, main_age, main_bpjs;
+    private Button btn_scan, btn_write, btn_enter, mLogout;
     private EditText et_name, et_mac, et_uuid;
     private Switch sw_auto;
     private ImageView img_loading;
@@ -93,6 +94,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        sessionManager = new SessionManager(MainActivity.this);
         initView();
         //Log.d("test", HexUtil.formatHexString(writeForSynchronizeRespiratoryRateData()));
 
@@ -136,6 +138,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
 
                 break;
+            case R.id.mButtonLogout:
+                sessionManager.logoutSession();
+
+                break;
 
         }
     }
@@ -147,6 +153,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_enter = (Button) findViewById(R.id.btn_enter);
         btn_enter.setOnClickListener(this);
         btn_scan = (Button) findViewById(R.id.btn_scan);
+        mLogout = (Button) findViewById(R.id.mButtonLogout);
+        mLogout.setOnClickListener(this);
         btn_scan.setText(getString(R.string.start_scan));
         btn_scan.setOnClickListener(this);
 
@@ -155,6 +163,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         operatingAnim.setInterpolator(new LinearInterpolator());
         progressDialog = new ProgressDialog(this);
 
+        main_name = (TextView) findViewById(R.id.main_tvName);
+        main_age = (TextView) findViewById(R.id.main_tvAge);
+        main_bpjs = (TextView) findViewById(R.id.main_tvBpjs);
+
+        main_name.setText(sessionManager.getName());
+        main_age.setText(sessionManager.getBirthDate());
+        main_bpjs.setText(sessionManager.getBPJS());
     }
 
 

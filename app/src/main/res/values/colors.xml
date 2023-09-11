@@ -9,4 +9,5 @@
     <color name="colorYellow">#FFC107</color>
     <color name="colorBlueSky">#10E8E0</color>
     <color name="colorRed">#E60707</color>
+    <color name="colorTheme">#0085ff</color>
 </resources>

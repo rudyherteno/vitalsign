@@ -3,6 +3,7 @@ package com.clj.blesample.model;
 import android.util.Log;
 
 import com.clj.blesample.lib.TransUtils;
+import com.clj.fastble.utils.HexUtil;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -28,27 +29,11 @@ public class Spo2Info {
     public int tempInteger;
     public String timeStr;
 
-    public void fameDate() {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        simpleDateFormat.setTimeZone(TimeZone.getDefault());
-        this.stimeFormat = simpleDateFormat.format(new Date(this.stime));
-        SimpleDateFormat simpleDateFormat2 = new SimpleDateFormat("HH:mm");
-        simpleDateFormat2.setTimeZone(TimeZone.getDefault());
-        this.timeStr = simpleDateFormat2.format(new Date(this.stime));
-        SimpleDateFormat simpleDateFormat3 = new SimpleDateFormat("HH");
-        simpleDateFormat3.setTimeZone(TimeZone.getDefault());
-        this.hour = Integer.parseInt(simpleDateFormat3.format(new Date(this.stime)));
-    }
 
     public void initWithData(byte[] bArr) {
         if (bArr != null && bArr.length >= 15) {
             Log.d("iiiii", bArr.length + "");
-            long Bytes2Dec = ((long) TransUtils.Bytes2Dec(new byte[]{bArr[3], bArr[2], bArr[1], bArr[0]})) + 946684800;
-            this.stime = Bytes2Dec;
-            long j = Bytes2Dec * 1000;
-            this.stime = j;
-            this.stime = j - TransUtils.getTimeOffset();
-            fameDate();
+
             this.tempDouble = bArr[14] & -1;
             if (this.tempDouble==15)
             this.SPo2 = bArr[9] & -1;
@@ -58,8 +43,14 @@ public class Spo2Info {
             this.cvrr = bArr[12] & -1;
             this.hrv = bArr[11] & -1;
             this.tempInteger = bArr[13];
+            String d = "";
+            for (int i=0; i<bArr.length; i++) {
+                d+=bArr[i] & -1;
+                d+=" ";
+            }
 
-            Log.d("uuuuu", this.SPo2 + "--" + this.breathPer + "--" + this.cvrr + "--" + this.hrv + "--" + this.tempInteger + "--" + this.tempDouble);
+            Log.d("uuuuu-spo2", d);
+            Log.d("uuuuu-spo2", this.SPo2 + "--" + this.breathPer + "--" + this.cvrr + "--" + this.hrv + "--" + this.tempInteger + "--" + this.tempDouble);
         }
     }
 
