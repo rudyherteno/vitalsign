@@ -261,12 +261,12 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnGet:
                // write(connectedDevice,"05060700017380"); //oke temp
 
-                mGet.setText("Loading...");
-                mSpo2.setText("Loading...");
-                mBpm.setText("Loading...");
-                mHeart.setText("Loading...");
-                mBP.setText("Loading...");
-                mTemp.setText("Loading...");
+
+                mSpo2.setText("...");
+                mBpm.setText("...");
+                mHeart.setText("...");
+                mBP.setText("...");
+                mTemp.setText("...");
                 for (int a = 0; a<4 ;a++) {
                     Handler handler1 = new Handler();
                     handler1.postDelayed(new Runnable() {

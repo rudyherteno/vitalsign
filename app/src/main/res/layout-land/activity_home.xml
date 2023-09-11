@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".activity.HomeActivity">
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -18,264 +19,296 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/activity_horizontal_margin"
+                android:background="@drawable/roundedinput"
                 android:orientation="vertical">
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-
-                    <RelativeLayout
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:id="@+id/tv_home_name"
+                        android:textColor="@color/colorWhite"
+                        android:text="Nama Pasien"></TextView>
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="right">
+                        android:layout_toRightOf="@id/tvResult"
+                        android:gravity="right"
+
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvResult"
+                            android:textSize="20dp"
+
+                            android:gravity="center_horizontal|center_vertical"
+                            android:textColor="@color/colorWhite"
+                            android:text="1"></TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:textSize="20dp"
+
+                            android:gravity="center_horizontal|center_vertical"
+                            android:textColor="@color/colorWhite"
+                            android:text=" ("></TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorWhite"
+                            android:id="@+id/tv_ews_label"
+                            android:textSize="20dp"
+                            android:text="RESIKO RENDAH"></TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:textSize="20dp"
+
+                            android:gravity="center_horizontal|center_vertical"
+                            android:textColor="@color/colorWhite"
+                            android:text=") "></TextView>
                         <Button
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:background="@drawable/ic_baseline_refresh_24"
                             android:id="@+id/btnGet"></Button>
-                    </RelativeLayout>
+
+                    </LinearLayout>
+
 
                 </RelativeLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:weightSum="5">
+                   <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:padding="@dimen/activity_horizontal_margin"
+                       android:orientation="vertical"
+                       android:layout_weight="1">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textSize="25dp"
+                           android:textColor="@color/colorGreen"
+                           android:text="HR"></TextView>
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:id="@+id/tvHeart"
+                           android:textSize="30dp"
+                           android:textStyle="bold"
+                           android:layout_alignParentBottom="true"
+                           android:textColor="@color/colorGreen"
+                           android:text="-"></TextView>
+
+
+                   </LinearLayout>
+                   <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:padding="@dimen/activity_horizontal_margin"
+                       android:orientation="vertical"
+                       android:layout_weight="1">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textSize="25dp"
+                           android:textColor="@color/colorYellow"
+                           android:text="SPO2"></TextView>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:id="@+id/tvSpo2"
+                           android:textSize="30dp"
+                           android:textStyle="bold"
+                           android:textColor="@color/colorYellow"
+                           android:layout_alignParentBottom="true"
+                           android:text="-"></TextView>
+
+
+                   </LinearLayout>
+                   <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:padding="@dimen/activity_horizontal_margin"
+                       android:orientation="vertical">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textSize="25dp"
+                           android:textColor="@color/colorBlueSky"
+                           android:text="RR"></TextView>
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:id="@+id/tvBpm"
+                           android:textSize="30dp"
+                           android:textStyle="bold"
+                           android:layout_alignParentBottom="true"
+                           android:textColor="@color/colorBlueSky"
+                           android:text="-"></TextView>
+
+
+                   </LinearLayout>
+                   <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:padding="@dimen/activity_horizontal_margin"
+                       android:orientation="vertical">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textSize="25dp"
+                           android:textColor="@color/colorRed"
+                           android:text="Temp"></TextView>
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:id="@+id/tvTemp"
+                           android:textSize="30dp"
+                           android:textStyle="bold"
+                           android:layout_alignParentBottom="true"
+                           android:textColor="@color/colorRed"
+                           android:text="-"></TextView>
+
+
+                   </LinearLayout>
+                   <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:padding="@dimen/activity_horizontal_margin"
+                       android:orientation="vertical">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textSize="25dp"
+                           android:textColor="@color/colorGreen"
+                           android:text="BP"></TextView>
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:id="@+id/tvBloodPressure"
+                           android:textSize="30dp"
+                           android:textStyle="bold"
+                           android:layout_alignParentBottom="true"
+                           android:textColor="@color/colorGreen"
+                           android:text="-"></TextView>
+
+
+                   </LinearLayout>
+
+               </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorWhite"
+                        android:text="Terakhir Update : "/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorWhite"
+                        android:id="@+id/tv_ews_lastdate"
+
+                        android:text="30 Agustus 2022"></TextView>
+
+                </LinearLayout>
 
             </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"></View>
+           <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"></View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/rounded"
+                android:layout_weight="1"
                 android:padding="@dimen/activity_horizontal_margin"
-                android:orientation="vertical">
-
+                android:orientation="vertical"
+                android:layout_marginRight="5dp"
+                android:id="@+id/boxTingkatSadar">
                 <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp">
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="25dp"
-                            android:textColor="@color/colorWhite"
-                            android:text="Nama Pasien"></TextView>
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
 
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:background="@drawable/rounded"
-                            android:orientation="horizontal">
+                    android:textColor="@color/colorWhite"
+                    android:text="Tingkat Kesadaran"></TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvSadar"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/colorWhite"
+                    android:text="-"></TextView>
+                </LinearLayout>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24"/>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/tvResult"
-                                android:textSize="25dp"
-                                android:layout_toLeftOf="@id/tvResult"
-                                android:textColor="@color/colorWhite"
-                                android:text="1"></TextView>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textColor="@color/colorWhite"
-                                android:textSize="20dp"
-                                android:id="@+id/tv_resiko"
-                                android:text="(RESIKO RENDAH)"></TextView>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textColor="@color/colorWhite"
-                                android:textSize="10dp"
-                                android:visibility="gone"
-                                android:text="30 Agustus 2022"></TextView>
-                        </LinearLayout>
-                    </RelativeLayout>
                 </RelativeLayout>
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="5dp"></View>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/rounded"
-                android:padding="@dimen/activity_horizontal_margin"
-                android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="15dp"
-                        android:textColor="@color/colorGreen"
-                        android:text="Detak Jantung"></TextView>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/tvHeart"
-                        android:textSize="20dp"
-                        android:textStyle="bold"
-                        android:layout_alignParentBottom="true"
-                        android:textColor="@color/colorGreen"
-                        android:text="-"></TextView>
-
-
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="5dp"></View>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/rounded"
-                android:padding="@dimen/activity_horizontal_margin"
-                android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="15dp"
-                        android:textColor="@color/colorYellow"
-                        android:text="SPO2"></TextView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/tvSpo2"
-                        android:textSize="20dp"
-                        android:textStyle="bold"
-                        android:textColor="@color/colorYellow"
-                        android:layout_alignParentBottom="true"
-                        android:text="-"></TextView>
-
-
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="5dp"></View>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/rounded"
-                android:padding="@dimen/activity_horizontal_margin"
-                android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="15dp"
-                        android:textColor="@color/colorBlueSky"
-                        android:text="Laju Penapasan"></TextView>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/tvBpm"
-                        android:textSize="20dp"
-                        android:textStyle="bold"
-                        android:layout_alignParentBottom="true"
-                        android:textColor="@color/colorBlueSky"
-                        android:text="-"></TextView>
-
-
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="5dp"></View>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/rounded"
-                android:padding="@dimen/activity_horizontal_margin"
-                android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="15dp"
-                        android:textColor="@color/colorRed"
-                        android:text="Suhu Tubuh"></TextView>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/tvTemp"
-                        android:textSize="20dp"
-                        android:textStyle="bold"
-                        android:layout_alignParentBottom="true"
-                        android:textColor="@color/colorRed"
-                        android:text="-"></TextView>
-
-
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="5dp"></View>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/rounded"
-                android:padding="@dimen/activity_horizontal_margin"
-                android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="15dp"
-                        android:textColor="@color/colorGreen"
-                        android:text="Tekanan Darah"></TextView>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/tvBloodPressure"
-                        android:textSize="20dp"
-                        android:textStyle="bold"
-                        android:layout_alignParentBottom="true"
-                        android:textColor="@color/colorGreen"
-                        android:text="-"></TextView>
-
-
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="5dp"></View>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="15dp"
-                android:textColor="@color/colorWhite"
-                android:text="Lainnya"></TextView>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="5dp"></View>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/rounded"
-                android:padding="@dimen/activity_horizontal_margin"
-                android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="15dp"
-                        android:textColor="@color/colorWhite"
-                        android:text="Tingkat Kesadaran"></TextView>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/tvSadar"
-                        android:textSize="20dp"
-                        android:textStyle="bold"
-                        android:layout_alignParentBottom="true"
-                        android:textColor="@color/colorWhite"
-                        android:text="Sadar"></TextView>
-
 
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:background="@drawable/rounded"
                 android:padding="@dimen/activity_horizontal_margin"
-                android:orientation="vertical">
-
+                android:orientation="vertical"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/boxOksigen">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -290,9 +323,18 @@
                     android:textStyle="bold"
                     android:layout_alignParentBottom="true"
                     android:textColor="@color/colorWhite"
-                    android:text="Tidak ada"></TextView>
+                    android:text="-"></TextView>
+                </LinearLayout>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24"/>
 
+                </RelativeLayout>
 
+            </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

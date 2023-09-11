@@ -253,25 +253,44 @@
                 android:padding="@dimen/activity_horizontal_margin"
                 android:orientation="vertical"
                 android:id="@+id/boxTingkatSadar">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15dp"
+                            android:textColor="@color/colorWhite"
+                            android:text="Tingkat Kesadaran"></TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvSadar"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:layout_alignParentBottom="true"
+                            android:textColor="@color/colorWhite"
+                            android:text="-"></TextView>
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="15dp"
-                        android:textColor="@color/colorWhite"
-                        android:text="Tingkat Kesadaran"></TextView>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/tvSadar"
-                        android:textSize="20dp"
-                        android:textStyle="bold"
-                        android:layout_alignParentBottom="true"
-                        android:textColor="@color/colorWhite"
-                        android:text="-"></TextView>
+                </RelativeLayout>
+
 
 
             </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"></View>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -279,7 +298,13 @@
                 android:padding="@dimen/activity_horizontal_margin"
                 android:orientation="vertical"
                 android:id="@+id/boxOksigen">
-
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -295,6 +320,15 @@
                     android:layout_alignParentBottom="true"
                     android:textColor="@color/colorWhite"
                     android:text="-"></TextView>
+                </LinearLayout>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24"/>
+
+                </RelativeLayout>
 
 
             </LinearLayout>
